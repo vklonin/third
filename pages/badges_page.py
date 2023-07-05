@@ -1,6 +1,7 @@
 from selene import by, be
 from selene.support.shared.jquery_style import s, ss
 
+from asserts.attributes_checks import check_element_visibility_by_class_name
 from pages.base_page import BasePage
 
 
@@ -13,5 +14,4 @@ class BadgesPage(BasePage):
 
     @staticmethod
     def is_badge_present(badge_name):
-        s(by.class_name(badge_name)).should(be.visible)
-        return True
+        assert check_element_visibility_by_class_name(badge_name)

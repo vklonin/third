@@ -11,6 +11,6 @@ from data.test_data import test_data
 def test_badges(badge, expected):
     logger = get_logger('TestBadges')
     page = BadgesPage()
-    assert page.is_badge_present(badge)
+    page.is_badge_present(badge)
 
     logger.info(f"Badge '{badge}' is present.")
