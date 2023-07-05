@@ -1,1 +1,1 @@
-pytest --alluredir=reports ; allure serve reports
+pytest --alluredir=reports
